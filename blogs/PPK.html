@@ -1,0 +1,251 @@
+ <!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilian Valkhof</title>
+    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+<body>
+    
+ 
+ <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+ 
+    <header>
+        <nav>
+            <a href="#" class="nav-logo">MD</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#goals">Goals</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../blogs.html">Arcade</a></li>
+            </ul>
+            <span class="nav-tag">WEB DESIGN & DEV</span>
+        </nav>
+    </header>
+ 
+    <!-- HERO -->
+    <div class="blog-hero">
+        <div class="grid-bg"></div>
+        <div class="hero-bg-num">PPK</div>
+ 
+        <a href="../blogs.html" class="back-link">← Terug naar blogs</a>
+ 
+        <div class="blog-meta">
+            <span class="blog-category">Weekly Nerd</span>
+            <span class="blog-date">2024 — Sessie #02</span>
+        </div>
+ 
+        <h1 class="blog-hero-title">
+            Peter-Paul<br>
+            <span class="outline">Koch</span>
+        </h1>
+ 
+        <p class="blog-hero-sub">
+            Browsers, accessibility en rendering engines.
+            Denk eerst goed na over je layout.
+        </p>
+    </div>
+ 
+    <!-- LAYOUT -->
+    <div style="position:relative;">
+        <div class="grid-bg" style="opacity:0.2;"></div>
+        <div class="blog-layout">
+ 
+            <!-- ARTICLE -->
+            <article class="blog-article">
+ 
+                <p class="reveal">
+                    Tijdens de Weekly Nerd gaf
+                    <a href="#">Peter-Paul Koch</a>
+                    een presentatie over browsers, accessibility en hoe rendering engines werken.
+                    De talk ging vooral over hoe browsers HTML en CSS verwerken,
+                    waarom accessibility belangrijk is en hoe developers beter kunnen nadenken
+                    over hun layouts en structuur.
+                </p>
+ 
+                <h2 class="reveal" id="javascript">JavaScript als standaard engine</h2>
+ 
+                <p class="reveal">
+                    Volgens Peter-Paul Koch wordt JavaScript tegenwoordig gebruikt als standaard engine binnen browsers.
+                    JavaScript speelt een grote rol in interactieve websites en werkt samen met andere onderdelen
+                    van de browser, zoals de DOM en rendering engine.
+                </p>
+ 
+                <h2 class="reveal" id="aom">Wat is AOM?</h2>
+ 
+                <p class="reveal">
+                    De AOM (Accessibility Object Model) lijkt veel op de DOM, maar heeft een andere focus.
+                    Waar de DOM vooral de structuur van een webpagina beschrijft,
+                    is de AOM meer gericht op accessibility.
+                </p>
+ 
+                <p class="reveal">
+                    De AOM helpt bijvoorbeeld mensen die gebruikmaken van screenreaders
+                    of andere accessibility-tools. Hierdoor kunnen websites beter toegankelijk
+                    worden gemaakt voor gebruikers met beperkingen.
+                </p>
+ 
+                <h2 class="reveal" id="browser">Wat is een browser?</h2>
+ 
+                <p class="reveal">Een browser bestaat uit verschillende onderdelen die samenwerken:</p>
+ 
+                <ul class="reveal">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>DOM</li>
+                    <li>AOM</li>
+                    <li>Interface</li>
+                </ul>
+ 
+                <p class="reveal">
+                    Al deze onderdelen zorgen ervoor dat een website goed geladen,
+                    weergegeven en gebruikt kan worden.
+                </p>
+ 
+                <h2 class="reveal" id="rendering">Rendering engine</h2>
+ 
+                <p class="reveal">
+                    De rendering engine is verantwoordelijk voor meerdere belangrijke processen binnen een browser.
+                    Deze engine zorgt voor:
+                </p>
+ 
+                <ul class="reveal">
+                    <li>HTML parsing</li>
+                    <li>CSS parsing</li>
+                    <li>Rendering van de pagina</li>
+                    <li>Constructie van de DOM tree</li>
+                    <li>Constructie van de AOM tree</li>
+                </ul>
+ 
+                <p class="reveal">
+                    De rendering engine is dus niet verantwoordelijk voor de interface
+                    of de JavaScript engine, maar vooral voor het verwerken en weergeven
+                    van content op een webpagina.
+                </p>
+ 
+                <h2 class="reveal" id="layout">Denk eerst goed na over je layout</h2>
+ 
+                <p class="reveal">
+                    Een belangrijk punt uit de presentatie was dat je eerst goed moet nadenken
+                    over je layout voordat je begint met bouwen.
+                </p>
+ 
+                <p class="reveal">
+                    Wanneer je tijdens het ontwikkelen steeds grote veranderingen maakt aan de structuur
+                    of layout, kan het zogenaamde "popcorn effect" ontstaan.
+                    Hierbij blijven er steeds nieuwe problemen verschijnen doordat onderdelen van de website elkaar beïnvloeden.
+                </p>
+ 
+                <p class="reveal">
+                    Daarom is het slimmer om eerst een sterke basisstructuur te ontwerpen
+                    en daarna pas verder te bouwen.
+                </p>
+ 
+                <h2 class="reveal" id="backward">Backward compatibility</h2>
+ 
+                <p class="reveal">
+                    Browsers ondersteunen vaak nog steeds oude technieken en functies.
+                    Dit heet backward compatibility.
+                </p>
+ 
+                <p class="reveal">Volgens Peter-Paul Koch betekent dit eigenlijk:</p>
+ 
+                <blockquote class="reveal">
+                    <p>
+                        Alles wat een browser ooit heeft ondersteund,
+                        moet die browser voor altijd blijven ondersteunen.
+                    </p>
+                </blockquote>
+ 
+                <p class="reveal">Hierdoor blijven oudere websites vaak nog werken in moderne browsers.</p>
+ 
+            </article>
+ 
+            <!-- SIDEBAR -->
+            <aside class="blog-sidebar">
+ 
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Spreker</p>
+                    <p class="sidebar-name">Peter-Paul Koch</p>
+                    <p class="sidebar-desc">Browserexpert, schrijver en spreker over hoe browsers werken,
+                        accessibility en de toekomst van het web.</p>
+                    <a href="#" class="sidebar-link">Bekijk werk ↗</a>
+                </section>
+ 
+                <section class="sidebar-block reveal" style="transition-delay:0.1s;">
+                    <p class="sidebar-label">— Inhoud</p>
+                    <a href="#javascript" class="toc-item">
+                        <span class="toc-num">01</span>
+                        <span class="toc-text">JavaScript als engine</span>
+                    </a>
+                    <a href="#aom" class="toc-item">
+                        <span class="toc-num">02</span>
+                        <span class="toc-text">Wat is AOM?</span>
+                    </a>
+                    <a href="#browser" class="toc-item">
+                        <span class="toc-num">03</span>
+                        <span class="toc-text">Wat is een browser?</span>
+                    </a>
+                    <a href="#rendering" class="toc-item">
+                        <span class="toc-num">04</span>
+                        <span class="toc-text">Rendering engine</span>
+                    </a>
+                    <a href="#layout" class="toc-item">
+                        <span class="toc-num">05</span>
+                        <span class="toc-text">Layout planning</span>
+                    </a>
+                    <a href="#backward" class="toc-item">
+                        <span class="toc-num">06</span>
+                        <span class="toc-text">Backward compatibility</span>
+                    </a>
+                </section>
+ 
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Tags</p>
+                    <ul class="tag-list">
+                        <li><span class="tag">Browsers</span></li>
+                        <li><span class="tag">Accessibility</span></li>
+                        <li><span class="tag">AOM</span></li>
+                        <li><span class="tag">Rendering</span></li>
+                        <li><span class="tag">Weekly Nerd</span></li>
+                    </ul>
+                </section>
+ 
+            </aside>
+        </div>
+    </div>
+ 
+    <!-- NEXT BLOG -->
+    <div class="next-blog">
+        <div>
+            <p class="next-label">Volgende blog</p>
+            <p class="next-title">Kilian Valkhof — CSS First</p>
+        </div>
+        <a href="KilianValkhof.html" class="next-arrow">→</a>
+    </div>
+ 
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+        <div class="marquee-inner">
+            <span>PETER-PAUL KOCH</span><span class="dot">✦</span>
+            <span>BROWSERS</span><span class="dot">✦</span>
+            <span>ACCESSIBILITY</span><span class="dot">✦</span>
+            <span>RENDERING ENGINE</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>AOM &amp; DOM</span><span class="dot">✦</span>
+            <span>PETER-PAUL KOCH</span><span class="dot">✦</span>
+            <span>BROWSERS</span><span class="dot">✦</span>
+            <span>ACCESSIBILITY</span><span class="dot">✦</span>
+            <span>RENDERING ENGINE</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>AOM &amp; DOM</span><span class="dot">✦</span>
+        </div>
+    </div>
+
+    </body>
+ 

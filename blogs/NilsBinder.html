@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nils Binder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <header>
+        <nav>
+            <a href="#" class="nav-logo">MD</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#goals">Goals</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../blogs.html">Arcade</a></li>
+            </ul>
+            <span class="nav-tag">WEB DESIGN &amp; DEV</span>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="blog-hero">
+        <div class="grid-bg"></div>
+        <div class="hero-bg-num">NB</div>
+
+        <a href="../blogs.html" class="back-link">← Terug naar blogs</a>
+
+        <div class="blog-meta">
+            <span class="blog-category">Weekly Nerd</span>
+            <span class="blog-date">2024 — Sessie #03</span>
+        </div>
+
+        <h1 class="blog-hero-title">
+            Nils<br>
+            <span class="outline">Binder</span>
+        </h1>
+
+        <p class="blog-hero-sub">
+            Sensational and Practical — design tools, animaties
+            en page transitions in modern webdesign.
+        </p>
+    </div>
+
+    <!-- LAYOUT -->
+    <div style="position:relative;">
+        <div class="grid-bg" style="opacity:0.2;"></div>
+        <div class="blog-layout">
+
+            <!-- ARTICLE -->
+            <article class="blog-article">
+
+                <p class="reveal">
+                    Tijdens deze Weekly Nerd gaf
+                    <a href="#">Nils Binder</a>
+                    een presentatie over de ontwikkeling van design tools en nieuwe technieken
+                    binnen webdesign. Er werd besproken hoe tools zoals Figma tegenwoordig
+                    een grote rol spelen binnen het ontwerpen van websites en hoe nieuwe
+                    CSS-technieken animaties en page transitions verbeteren.
+                </p>
+
+                <h2 class="reveal" id="figma">Van Photoshop naar Figma</h2>
+
+                <p class="reveal">
+                    Vroeger gebruikten designers vaak Adobe Photoshop om websites te ontwerpen.
+                    Tegenwoordig gebruiken veel mensen echter Figma voor het ontwerpen
+                    van interfaces en websites.
+                </p>
+
+                <p class="reveal">
+                    Figma is populair geworden omdat het beter aansluit op het moderne
+                    webdesign- en developmentproces.
+                    De tool gebruikt termen en structuren die makkelijker te begrijpen zijn
+                    voor developers, waardoor designs eenvoudiger geïmplementeerd kunnen worden in code.
+                </p>
+
+                <h2 class="reveal" id="waarom">Waarom Figma handig is</h2>
+
+                <p class="reveal">
+                    Een belangrijk verschil tussen Photoshop en Figma is dat Figma speciaal gemaakt is
+                    voor interface- en webdesign.
+                </p>
+
+                <p class="reveal">
+                    Met Photoshop was het mogelijk om designs te maken die technisch moeilijk
+                    of soms zelfs onmogelijk waren om exact na te bouwen in code.
+                    Bij Figma is dit anders.
+                </p>
+
+                <p class="reveal">
+                    Alles wat in Figma ontworpen wordt, kan in principe ook ontwikkeld worden
+                    voor een echte website. Daardoor werkt Figma beter samen met HTML, CSS
+                    en moderne frontend-technieken.
+                </p>
+
+                <h2 class="reveal" id="animaties">Animaties met afbeeldingen</h2>
+
+                <p class="reveal">
+                    Tijdens de presentatie werd ook besproken dat je niet altijd video's hoeft te gebruiken
+                    om beweging op een website te tonen.
+                </p>
+
+                <p class="reveal">
+                    In plaats van een video kun je meerdere afbeeldingen naast elkaar plaatsen
+                    en daar animaties aan toevoegen.
+                    Hierdoor kun je lichte en snelle visuele effecten maken zonder zware videobestanden te gebruiken.
+                </p>
+
+                <p class="reveal">
+                    Dit kan handig zijn voor performance en laadtijden van websites.
+                </p>
+
+                <h2 class="reveal" id="transitions">View Transitions</h2>
+
+                <p class="reveal">
+                    Een ander onderwerp was View Transitions.
+                    Dit is een nieuwe CSS-techniek waarmee overgangen tussen pagina's
+                    soepeler gemaakt kunnen worden.
+                </p>
+
+                <p class="reveal">
+                    Bijvoorbeeld wanneer een gebruiker van taal wisselt
+                    of naar een andere pagina navigeert,
+                    kan de overgang geanimeerd worden in plaats van direct te veranderen.
+                    Hierdoor voelt een website moderner en vloeiender aan.
+                </p>
+
+                <p class="reveal">
+                    View Transitions helpen dus bij het verbeteren van de gebruikerservaring
+                    en maken websites interactiever.
+                </p>
+
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="blog-sidebar">
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Spreker</p>
+                    <p class="sidebar-name">Nils Binder</p>
+                    <p class="sidebar-desc">Designer en developer, spreker over moderne design tools,
+                        CSS-animaties en de toekomst van webdesign workflows.</p>
+                    <a href="#" class="sidebar-link">Bekijk werk ↗</a>
+                </section>
+
+                <section class="sidebar-block reveal" style="transition-delay:0.1s;">
+                    <p class="sidebar-label">— Inhoud</p>
+                    <a href="#figma" class="toc-item">
+                        <span class="toc-num">01</span>
+                        <span class="toc-text">Van Photoshop naar Figma</span>
+                    </a>
+                    <a href="#waarom" class="toc-item">
+                        <span class="toc-num">02</span>
+                        <span class="toc-text">Waarom Figma handig is</span>
+                    </a>
+                    <a href="#animaties" class="toc-item">
+                        <span class="toc-num">03</span>
+                        <span class="toc-text">Animaties met afbeeldingen</span>
+                    </a>
+                    <a href="#transitions" class="toc-item">
+                        <span class="toc-num">04</span>
+                        <span class="toc-text">View Transitions</span>
+                    </a>
+                </section>
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Tags</p>
+                    <ul class="tag-list">
+                        <li><span class="tag">Figma</span></li>
+                        <li><span class="tag">CSS</span></li>
+                        <li><span class="tag">Animaties</span></li>
+                        <li><span class="tag">View Transitions</span></li>
+                        <li><span class="tag">Weekly Nerd</span></li>
+                    </ul>
+                </section>
+
+            </aside>
+        </div>
+    </div>
+
+    <!-- NEXT BLOG -->
+    <div class="next-blog">
+        <div>
+            <p class="next-label">Volgende blog</p>
+            <p class="next-title">Peter-Paul Koch — Browsers</p>
+        </div>
+        <a href="PPK.html" class="next-arrow">→</a>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+        <div class="marquee-inner">
+            <span>NILS BINDER</span><span class="dot">✦</span>
+            <span>FIGMA</span><span class="dot">✦</span>
+            <span>VIEW TRANSITIONS</span><span class="dot">✦</span>
+            <span>CSS ANIMATIES</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>DESIGN TOOLS</span><span class="dot">✦</span>
+            <span>NILS BINDER</span><span class="dot">✦</span>
+            <span>FIGMA</span><span class="dot">✦</span>
+            <span>VIEW TRANSITIONS</span><span class="dot">✦</span>
+            <span>CSS ANIMATIES</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>DESIGN TOOLS</span><span class="dot">✦</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

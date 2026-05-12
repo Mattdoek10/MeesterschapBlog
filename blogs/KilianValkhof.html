@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilian Valkhof</title>
+    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+
+<body>
+
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <header>
+        <nav>
+            <a href="#" class="nav-logo">MD</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#goals">Goals</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="blogs.html">Arcade</a></li>
+            </ul>
+            <span class="nav-tag">WEB DESIGN & DEV</span>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="blog-hero">
+        <div class="grid-bg"></div>
+        <div class="hero-bg-num">KV</div>
+
+        <a href="/blogs.html" class="back-link">← Terug naar blogs</a>
+
+        <div class="blog-meta">
+            <span class="blog-category">Weekly Nerd</span>
+            <span class="blog-date">2024 — Sessie #01</span>
+        </div>
+
+        <h1 class="blog-hero-title">
+            Kilian<br>
+            <span class="outline">Valkhof</span>
+        </h1>
+
+        <p class="blog-hero-sub">
+            Frontend development, CSS en het eenvoudiger maken van websites.
+            Houd het simpel.
+        </p>
+    </div>
+
+    <!-- <div class="torn-to-cream"></div> -->
+
+    <!-- LAYOUT -->
+    <div style="position:relative;">
+        <div class="grid-bg" style="opacity:0.2;"></div>
+        <div class="blog-layout">
+
+            <!-- ARTICLE -->
+            <article class="blog-article">
+
+                <p class="reveal">
+                    Tijdens deze Weekly Nerd gaf
+                    <a href="#">Kilian Valkhof</a>
+                    een presentatie over frontend development, CSS en het eenvoudiger maken van websites.
+                    De belangrijkste boodschap van de presentatie was dat developers hun oplossingen zo simpel mogelijk
+                    moeten houden.
+                </p>
+
+                <h2 class="reveal" id="simpel">Houd het simpel</h2>
+
+                <p class="reveal">Volgens Kilian moet je development niet moeilijker maken dan nodig is.</p>
+
+                <p class="reveal">
+                    Wanneer iets met CSS opgelost kan worden, hoef je niet direct JavaScript te gebruiken.
+                    CSS-oplossingen zijn vaak sneller, overzichtelijker en beter voor performance.
+                </p>
+
+                <p class="reveal">Een voorbeeld hiervan is:</p>
+
+                <pre class="reveal"><code>appearance: none;</code></pre>
+
+                <p class="reveal">
+                    Hiermee kun je standaard browserstijlen van formulieren en checkboxes verwijderen
+                    zodat je zelf een eigen design kunt maken.
+                </p>
+
+                <h2 class="reveal" id="forms">Waarom custom form styles bestaan</h2>
+
+                <p class="reveal">
+                    Vroeger zagen checkboxes, buttons en formulieren er in iedere browser bijna hetzelfde uit.
+                    Developers wilden meer controle over het design van hun interfaces en begonnen daarom
+                    eigen stijlen te maken voor formulieren.
+                </p>
+
+                <p class="reveal">
+                    Met CSS kun je tegenwoordig veel meer aanpassen zonder ingewikkelde JavaScript-oplossingen.
+                </p>
+
+                <h2 class="reveal" id="focus">Focus states en accessibility</h2>
+
+                <p class="reveal">Een ander belangrijk onderwerp was accessibility bij formulieren.</p>
+
+                <p class="reveal">
+                    Standaard heeft een inputveld vaak een opvallende focusstijl wanneer iemand met een toetsenbord
+                    navigeert.
+                    Veel developers verwijderen deze stijl met:
+                </p>
+
+                <pre class="reveal"><code>outline: none;</code></pre>
+
+                <p class="reveal">
+                    Maar dit is slecht voor accessibility, omdat toetsenbordgebruikers dan niet meer kunnen zien
+                    welk element geselecteerd is.
+                </p>
+
+                <p class="reveal">
+                    Daarom werd uitgelegd dat je beter een eigen focusstijl kunt ontwerpen
+                    in plaats van de outline volledig te verwijderen.
+                </p>
+
+                <p class="reveal">Bijvoorbeeld:</p>
+
+                <pre class="reveal"><code>outline-color: transparent;</code></pre>
+
+                <p class="reveal">
+                    Dit helpt mensen die websites gebruiken met een toetsenbord
+                    in plaats van alleen een muis of touchscreen.
+                </p>
+
+                <h2 class="reveal" id="scroll">Smooth scrolling met CSS</h2>
+
+                <p class="reveal">Ook het gebruik van smooth scrolling werd besproken.</p>
+
+                <pre class="reveal"><code>scroll-behavior: smooth;</code></pre>
+
+                <p class="reveal">
+                    kan de browser zelf scrollanimaties regelen zonder dat je hiervoor JavaScript hoeft te gebruiken.
+                </p>
+
+                <p class="reveal">Het voordeel hiervan is dat de browser automatisch rekening houdt met:</p>
+
+                <ul class="reveal">
+                    <li>De kracht van het apparaat</li>
+                    <li>Performance</li>
+                    <li>Browserinstellingen</li>
+                    <li>Accessibility voorkeuren van gebruikers</li>
+                </ul>
+
+                <p class="reveal">
+                    Daardoor kunnen animaties bijvoorbeeld langzamer afgespeeld worden op minder krachtige apparaten.
+                </p>
+
+                <p class="reveal">
+                    Normaal zouden developers dit allemaal handmatig moeten programmeren in JavaScript,
+                    maar CSS neemt dit werk grotendeels over.
+                </p>
+
+                <h2 class="reveal" id="control">Gebruikers controle geven</h2>
+
+                <p class="reveal">
+                    Een belangrijk punt uit de presentatie was dat gebruikers controle moeten houden over animaties.
+                </p>
+
+                <p class="reveal">
+                    Sommige mensen zetten animaties bewust uit vanwege accessibility-redenen,
+                    bijvoorbeeld omdat ze gevoelig zijn voor bewegende beelden.
+                </p>
+
+                <p class="reveal">
+                    Door moderne CSS-oplossingen te gebruiken kan de browser rekening houden met deze voorkeuren
+                    en een betere gebruikerservaring bieden voor iedereen.
+                </p>
+
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="blog-sidebar">
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Spreker</p>
+                    <p class="sidebar-name">Kilian Valkhof</p>
+                    <p class="sidebar-desc">Frontend developer, maker van Polypane en spreker over toegankelijke,
+                        simpele CSS oplossingen.</p>
+                    <a href="#" class="sidebar-link">Bekijk werk ↗</a>
+                </section>
+
+                <section class="sidebar-block reveal" style="transition-delay:0.1s;">
+                    <p class="sidebar-label">— Inhoud</p>
+                    <a href="#simpel" class="toc-item">
+                        <span class="toc-num">01</span>
+                        <span class="toc-text">Houd het simpel</span>
+                    </a>
+                    <a href="#forms" class="toc-item">
+                        <span class="toc-num">02</span>
+                        <span class="toc-text">Custom form styles</span>
+                    </a>
+                    <a href="#focus" class="toc-item">
+                        <span class="toc-num">03</span>
+                        <span class="toc-text">Focus &amp; accessibility</span>
+                    </a>
+                    <a href="#scroll" class="toc-item">
+                        <span class="toc-num">04</span>
+                        <span class="toc-text">Smooth scrolling</span>
+                    </a>
+                    <a href="#control" class="toc-item">
+                        <span class="toc-num">05</span>
+                        <span class="toc-text">Gebruikers controle</span>
+                    </a>
+                </section>
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Tags</p>
+                    <ul class="tag-list">
+                        <li><span class="tag">CSS</span></li>
+                        <li><span class="tag">Accessibility</span></li>
+                        <li><span class="tag">Frontend</span></li>
+                        <li><span class="tag">Performance</span></li>
+                        <li><span class="tag">Weekly Nerd</span></li>
+                    </ul>
+                </section>
+
+            </aside>
+        </div>
+    </div>
+
+    <!-- NEXT BLOG -->
+    <div class="next-blog">
+        <div>
+            <p class="next-label">Volgende blog</p>
+            <p class="next-title">Bramus — View Transitions</p>
+        </div>
+        <a href="#" class="next-arrow">→</a>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+        <div class="marquee-inner">
+            <span>KILIAN VALKHOF</span><span class="dot">✦</span>
+            <span>CSS FIRST</span><span class="dot">✦</span>
+            <span>ACCESSIBILITY</span><span class="dot">✦</span>
+            <span>KEEP IT SIMPLE</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>FRONTEND DEV</span><span class="dot">✦</span>
+            <span>KILIAN VALKHOF</span><span class="dot">✦</span>
+            <span>CSS FIRST</span><span class="dot">✦</span>
+            <span>ACCESSIBILITY</span><span class="dot">✦</span>
+            <span>KEEP IT SIMPLE</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>FRONTEND DEV</span><span class="dot">✦</span>
+        </div>
+    </div>
+</body>
+
+</html>
