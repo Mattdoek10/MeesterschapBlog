@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa – Hackers & Zelf Hosten</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <header>
+        <nav>
+            <a href="#" class="nav-logo">MD</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#goals">Goals</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../blogs.html">Arcade</a></li>
+            </ul>
+            <span class="nav-tag">WEB DESIGN &amp; DEV</span>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="blog-hero">
+        <div class="grid-bg"></div>
+        <div class="hero-bg-num">ROSA</div>
+
+        <a href="../blogs.html" class="back-link">← Terug naar blogs</a>
+
+        <div class="blog-meta">
+            <span class="blog-category">Weekly Nerd</span>
+            <span class="blog-date">2024 — Sessie #07</span>
+        </div>
+
+        <h1 class="blog-hero-title">
+            Rosa<br>
+            <span class="outline">Self-Host</span>
+        </h1>
+
+        <p class="blog-hero-sub">
+            Hackers, zelf servers hosten en alternatieven
+            voor grote commerciële platformen.
+        </p>
+    </div>
+
+    <!-- LAYOUT -->
+    <div style="position:relative;">
+        <div class="grid-bg" style="opacity:0.2;"></div>
+        <div class="blog-layout">
+
+            <!-- ARTICLE -->
+            <article class="blog-article">
+
+                <p class="reveal">
+                    Tijdens deze Weekly Nerd gaf <a href="#">Rosa</a> een presentatie
+                    over hackers, zelf servers hosten en alternatieven
+                    voor populaire online platformen.
+                </p>
+
+                <h2 class="reveal" id="hacker">Wat is een hacker?</h2>
+
+                <p class="reveal">
+                    Volgens Rosa is een hacker iemand
+                    die veel zelf doet en controle wil houden
+                    over zijn eigen systemen en data.
+                </p>
+
+                <p class="reveal">
+                    Daarbij hoort ook het zelf hosten van een server
+                    in plaats van afhankelijk zijn van grote bedrijven of platformen.
+                </p>
+
+                <h2 class="reveal" id="server">Zelf een server hosten</h2>
+
+                <p class="reveal">
+                    Tijdens de presentatie werd uitgelegd
+                    dat je zelf een server kunt maken
+                    door software zoals Gitea of Forgejo te installeren.
+                </p>
+
+                <ul class="reveal">
+                    <li>Gitea</li>
+                    <li>Forgejo</li>
+                </ul>
+
+                <p class="reveal">
+                    Met deze tools kun je bijvoorbeeld
+                    je eigen codeplatform beheren
+                    zonder gebruik te maken van grote commerciële diensten.
+                </p>
+
+                <h2 class="reveal" id="messaging">Messaging platforms</h2>
+
+                <p class="reveal">
+                    Voor communicatie en messaging
+                    werden ook alternatieve platformen besproken.
+                    Je kunt bijvoorbeeld Zulip of Libera Chat installeren
+                    om zelf chatdiensten te hosten.
+                </p>
+
+                <ul class="reveal">
+                    <li>Zulip</li>
+                    <li>Libera Chat</li>
+                </ul>
+
+                <p class="reveal">
+                    Hiermee krijgen gebruikers meer controle
+                    over hun communicatie en data.
+                </p>
+
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="blog-sidebar">
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Spreker</p>
+                    <p class="sidebar-name">Rosa</p>
+                    <p class="sidebar-desc">Spreker over hacker-cultuur, digitale autonomie
+                        en het zelf beheren van servers en platformen.</p>
+                    <a href="#" class="sidebar-link">Meer lezen ↗</a>
+                </section>
+
+                <section class="sidebar-block reveal" style="transition-delay:0.1s;">
+                    <p class="sidebar-label">— Inhoud</p>
+                    <a href="#hacker" class="toc-item">
+                        <span class="toc-num">01</span>
+                        <span class="toc-text">Wat is een hacker?</span>
+                    </a>
+                    <a href="#server" class="toc-item">
+                        <span class="toc-num">02</span>
+                        <span class="toc-text">Zelf een server hosten</span>
+                    </a>
+                    <a href="#messaging" class="toc-item">
+                        <span class="toc-num">03</span>
+                        <span class="toc-text">Messaging platforms</span>
+                    </a>
+                </section>
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">— Tags</p>
+                    <ul class="tag-list">
+                        <li><span class="tag">Self-hosting</span></li>
+                        <li><span class="tag">Hackers</span></li>
+                        <li><span class="tag">Open Source</span></li>
+                        <li><span class="tag">Privacy</span></li>
+                        <li><span class="tag">Weekly Nerd</span></li>
+                    </ul>
+                </section>
+
+            </aside>
+        </div>
+    </div>
+
+    <!-- NEXT BLOG -->
+    <div class="next-blog">
+        <div>
+            <p class="next-label">Volgende blog</p>
+            <p class="next-title">The Web You Want</p>
+        </div>
+        <a href="WebYouWant.html" class="next-arrow">→</a>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+        <div class="marquee-inner">
+            <span>ROSA</span><span class="dot">✦</span>
+            <span>SELF-HOSTING</span><span class="dot">✦</span>
+            <span>HACKERS</span><span class="dot">✦</span>
+            <span>OPEN SOURCE</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>DIGITALE AUTONOMIE</span><span class="dot">✦</span>
+            <span>ROSA</span><span class="dot">✦</span>
+            <span>SELF-HOSTING</span><span class="dot">✦</span>
+            <span>HACKERS</span><span class="dot">✦</span>
+            <span>OPEN SOURCE</span><span class="dot">✦</span>
+            <span>WEEKLY NERD</span><span class="dot">✦</span>
+            <span>DIGITALE AUTONOMIE</span><span class="dot">✦</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
