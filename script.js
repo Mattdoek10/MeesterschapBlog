@@ -10,16 +10,17 @@
     requestAnimationFrame(animateCursor);
   }
   animateCursor();
- 
-//   // Scroll reveal
-//   const reveals = document.querySelectorAll('.reveal');
-//   const obs = new IntersectionObserver(entries => {
-//     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-//   }, { threshold: 0.12 });
-//   reveals.forEach(r => obs.observe(r));
- 
 
-//   const obs = new IntersectionObserver(entries => {
-//     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-//   }, { threshold: 0.1 });
-//   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  // Menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+ 
+  

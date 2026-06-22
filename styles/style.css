@@ -129,3 +129,55 @@
       color: var(--red);
       font-family: 'Space Mono', monospace;
   }
+
+  /* HAMBURGER MENU */
+  .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--black);
+      cursor: pointer;
+      padding: 0.5rem;
+  }
+
+  .menu-btn:hover {
+      color: var(--red);
+  }
+
+  /* MOBILE RESPONSIVENESS */
+  @media (max-width: 768px) {
+      .menu-btn {
+          display: block;
+      }
+
+      nav {
+          flex-wrap: wrap;
+      }
+
+      .nav-links {
+          display: none;
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
+          order: 3;
+          margin-top: 1rem;
+          padding-top: 1rem;
+          border-top: 1px solid var(--black);
+      }
+
+      .nav-links.active {
+          display: flex;
+      }
+
+      .nav-links a {
+          font-size: 0.75rem;
+      }
+
+      .nav-tag {
+          order: 2;
+          width: 100%;
+          text-align: left;
+          margin-top: 0.5rem;
+      }
+  }
