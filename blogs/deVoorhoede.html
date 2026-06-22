@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Nerd - CSS, Design Systems & Offline First</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-logo">MD</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../goals.html">Goals</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../Reflectie.html">Reflectie</a></li>
+            </ul>
+            <span class="nav-tag">WEB DESIGN &amp; DEV</span>
+            <button class="menu-btn" id="menu-btn">&#9776;</button>
+        </nav>
+    </header>
+
+    <div class="blog-hero">
+        <div class="grid-bg"></div>
+        <div class="hero-bg-num">WN</div>
+
+        <a href="../blogs.html" class="back-link">&larr; Terug naar blogs</a>
+
+        <div class="blog-meta">
+            <span class="blog-category">Weekly Nerd</span>
+            <span class="blog-date">CSS, Design Systems &amp; Offline First</span>
+        </div>
+
+        <h1 class="blog-hero-title">
+            Weekly Nerd<br>
+            <span class="outline">Offline First</span>
+        </h1>
+
+        <p class="blog-hero-sub">
+            CSS-technieken, design systems, design tokens, PWA's en offline first werken in de praktijk.
+        </p>
+    </div>
+
+    <div style="position:relative;">
+        <div class="grid-bg" style="opacity:0.2;"></div>
+        <div class="blog-layout">
+
+            <article class="blog-article">
+
+                <p class="reveal">
+                    Tijdens deze Weekly Nerd werden verschillende onderwerpen besproken, waaronder geavanceerde
+                    CSS-technieken, design systems en het offline first principe.
+                </p>
+
+                <p class="reveal">
+                    De presentaties lieten zien hoe moderne webtechnieken kunnen bijdragen aan betere
+                    gebruikerservaringen, consistente interfaces en applicaties die ook zonder internetverbinding
+                    blijven werken.
+                </p>
+
+                <h2 class="reveal" id="onderwerpen">Belangrijke onderwerpen</h2>
+
+                <p class="reveal">Tijdens deze Weekly Nerd kwamen meerdere onderwerpen aan bod:</p>
+
+                <ul class="reveal">
+                    <li>CSS met <code>::after</code> en <code>clip-path</code></li>
+                    <li>Het HTML <code>ruby</code>-element</li>
+                    <li>Het project DGTL.nl</li>
+                    <li>NL Design System en design tokens</li>
+                    <li>Offline first en Progressive Web Apps</li>
+                    <li>Local Storage en synchronisatie van data</li>
+                </ul>
+
+                <h2 class="reveal" id="css">CSS met ::after en clip-path</h2>
+
+                <p class="reveal">
+                    Tijdens de presentatie van Marjolijn werd het project DGTL.nl besproken.
+                </p>
+
+                <p class="reveal">
+                    Voor dit project werd een visueel effect gemaakt met behulp van een <code>::after</code>
+                    pseudo-element gecombineerd met een <code>clip-path</code>.
+                </p>
+
+                <p class="reveal">
+                    Met pseudo-elementen kunnen decoratieve onderdelen worden toegevoegd zonder extra HTML-elementen te
+                    gebruiken.
+                </p>
+
+                <p class="reveal">
+                    De <code>clip-path</code>-techniek maakt het mogelijk om geometrische vormen uit elementen te
+                    knippen en zo unieke visuele effecten te creëren.
+                </p>
+
+                <h2 class="reveal" id="ruby">Het ruby-element</h2>
+
+                <p class="reveal">
+                    Er werd ook gesproken over het HTML <code>ruby</code>-element.
+                </p>
+
+                <p class="reveal">
+                    Dit element wordt gebruikt om bijvoorbeeld Japanse of Chinese tekens te voorzien van
+                    uitspraaknotaties boven de tekst.
+                </p>
+
+                <p class="reveal">
+                    Hierdoor kunnen gebruikers eenvoudiger begrijpen hoe bepaalde karakters uitgesproken moeten worden.
+                </p>
+
+                <h2 class="reveal" id="dgtl">Project DGTL.nl</h2>
+
+                <p class="reveal">
+                    Het project DGTL.nl werd ontwikkeld door een klein team van drie personen.
+                </p>
+
+                <p class="reveal">
+                    Tijdens de presentatie werd uitgelegd hoe moderne CSS-technieken werden gebruikt om visuele effecten
+                    te realiseren zonder afhankelijk te zijn van zware afbeeldingen of extra code.
+                </p>
+
+                <h2 class="reveal" id="nl-design-system">NL Design System</h2>
+
+                <p class="reveal">
+                    Peter vertelde over het NL Design System en hoe organisaties samenwerken aan herbruikbare
+                    componenten.
+                </p>
+
+                <p class="reveal">
+                    Wanneer een bestaande component bijna voldoet aan de wensen van een project, kan er een pull request
+                    worden gemaakt om verbeteringen of uitbreidingen voor te stellen.
+                </p>
+
+                <p class="reveal">
+                    Als voorbeeld werd een component van de gemeente Den Haag genoemd.
+                </p>
+
+                <p class="reveal">
+                    De eigenaar van het component blijft verantwoordelijk voor de uiteindelijke wijzigingen. Daarom
+                    moeten voorgestelde aanpassingen goed worden afgewogen.
+                </p>
+
+                <h2 class="reveal" id="design-tokens">Werken met design tokens</h2>
+
+                <p class="reveal">
+                    Binnen het NL Design System wordt veel gewerkt met design tokens.
+                </p>
+
+                <p class="reveal">
+                    Design tokens bevatten vooraf gedefinieerde waarden voor bijvoorbeeld kleuren, afstanden,
+                    lettertypes en afrondingen.
+                </p>
+
+                <p class="reveal">
+                    Hierdoor blijft een ontwerp consistent en hoeven developers geen nieuwe waardes te bedenken wanneer
+                    er al bestaande oplossingen beschikbaar zijn.
+                </p>
+
+                <p class="reveal">
+                    Het uitgangspunt is daarom: gebruik bestaande tokens voordat je nieuwe stijlen ontwerpt.
+                </p>
+
+                <h2 class="reveal" id="offline-first">Offline First</h2>
+
+                <p class="reveal">
+                    Een belangrijk onderwerp tijdens de presentatie was het offline first principe.
+                </p>
+
+                <p class="reveal">
+                    Hierbij ga je ervan uit dat een website of applicatie altijd offline kan zijn.
+                </p>
+
+                <p class="reveal">
+                    In plaats van internet als vanzelfsprekend te zien, ontwerp je een applicatie die ook zonder
+                    verbinding blijft functioneren.
+                </p>
+
+                <h2 class="reveal" id="pwa">Progressive Web Apps</h2>
+
+                <p class="reveal">
+                    Offline first wordt vaak toegepast binnen Progressive Web Apps (PWA's).
+                </p>
+
+                <p class="reveal">
+                    Een PWA combineert eigenschappen van websites en mobiele apps en kan gedeeltelijk offline blijven
+                    werken.
+                </p>
+
+                <p class="reveal">
+                    Hierdoor kunnen gebruikers een applicatie blijven gebruiken, zelfs wanneer zij tijdelijk geen
+                    internetverbinding hebben.
+                </p>
+
+                <h2 class="reveal" id="praktijkvoorbeeld">Praktijkvoorbeeld: Liftinspecties</h2>
+
+                <p class="reveal">
+                    Tijdens de presentatie werd een voorbeeld gegeven van een inspecteur die een lift moet beoordelen.
+                </p>
+
+                <p class="reveal">
+                    Omdat een lift zich soms op een locatie bevindt zonder goede internetverbinding, moet de applicatie
+                    gegevens lokaal kunnen opslaan.
+                </p>
+
+                <p class="reveal">
+                    Zodra er weer internet beschikbaar is, kunnen de opgeslagen gegevens automatisch worden
+                    gesynchroniseerd.
+                </p>
+
+                <h2 class="reveal" id="local-storage">Local Storage</h2>
+
+                <p class="reveal">
+                    Voor het tijdelijk opslaan van gegevens kan Local Storage worden gebruikt.
+                </p>
+
+                <p class="reveal">
+                    Hiermee kunnen gebruikersinformatie en formuliergegevens lokaal in de browser worden opgeslagen.
+                </p>
+
+                <p class="reveal">
+                    Wanneer de gebruiker later weer online komt, kunnen deze gegevens alsnog naar een server worden
+                    verstuurd.
+                </p>
+
+                <h2 class="reveal" id="inzichten">Belangrijkste inzichten</h2>
+
+                <ul class="reveal">
+                    <li>Gebruik pseudo-elementen zoals ::before en ::after voor decoratieve effecten.</li>
+                    <li>Gebruik clip-path om moderne vormen te creëren zonder afbeeldingen.</li>
+                    <li>Gebruik het ruby-element voor Japanse en Chinese uitspraaknotaties.</li>
+                    <li>Werk zoveel mogelijk met bestaande design tokens.</li>
+                    <li>Denk vanuit een offline first aanpak.</li>
+                    <li>Gebruik Local Storage voor tijdelijke gegevensopslag.</li>
+                    <li>Overweeg Progressive Web Apps voor offline functionaliteit.</li>
+                </ul>
+
+                <h2 class="reveal" id="reflectie">Mijn Reflectie</h2>
+
+                <p class="reveal">
+                    Wat ik interessant vond aan deze Weekly Nerd was de combinatie van design, development en
+                    gebruiksvriendelijkheid.
+                </p>
+
+                <p class="reveal">
+                    Vooral het offline first principe vond ik waardevol, omdat ik hier nog niet eerder uitgebreid over
+                    had nagedacht.
+                </p>
+
+                <p class="reveal">
+                    Daarnaast vond ik het leerzaam om te zien hoe design systems en design tokens worden gebruikt om
+                    consistente interfaces te bouwen.
+                </p>
+
+                <p class="reveal">
+                    Ook de CSS-technieken met pseudo-elementen en clip-path gaven mij nieuwe ideeën voor het maken van
+                    creatieve visuele effecten zonder extra HTML of afbeeldingen te gebruiken.
+                </p>
+
+            </article>
+
+            <aside class="blog-sidebar">
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">&mdash; Thema</p>
+                    <p class="sidebar-name">Weekly Nerd</p>
+                    <p class="sidebar-desc">Een sessie over CSS, design systems, design tokens en offline first
+                        applicaties.</p>
+                    <a href="#onderwerpen" class="sidebar-link">Bekijk onderwerpen &nearr;</a>
+                </section>
+
+                <section class="sidebar-block reveal" style="transition-delay:0.1s;">
+                    <p class="sidebar-label">&mdash; Inhoud</p>
+                    <a href="#onderwerpen" class="toc-item">
+                        <span class="toc-num">01</span>
+                        <span class="toc-text">Onderwerpen</span>
+                    </a>
+                    <a href="#css" class="toc-item">
+                        <span class="toc-num">02</span>
+                        <span class="toc-text">CSS &amp; clip-path</span>
+                    </a>
+                    <a href="#ruby" class="toc-item">
+                        <span class="toc-num">03</span>
+                        <span class="toc-text">Ruby-element</span>
+                    </a>
+                    <a href="#dgtl" class="toc-item">
+                        <span class="toc-num">04</span>
+                        <span class="toc-text">Project DGTL.nl</span>
+                    </a>
+                    <a href="#nl-design-system" class="toc-item">
+                        <span class="toc-num">05</span>
+                        <span class="toc-text">NL Design System</span>
+                    </a>
+                    <a href="#design-tokens" class="toc-item">
+                        <span class="toc-num">06</span>
+                        <span class="toc-text">Design tokens</span>
+                    </a>
+                    <a href="#offline-first" class="toc-item">
+                        <span class="toc-num">07</span>
+                        <span class="toc-text">Offline First</span>
+                    </a>
+                    <a href="#pwa" class="toc-item">
+                        <span class="toc-num">08</span>
+                        <span class="toc-text">PWA's</span>
+                    </a>
+                    <a href="#praktijkvoorbeeld" class="toc-item">
+                        <span class="toc-num">09</span>
+                        <span class="toc-text">Liftinspecties</span>
+                    </a>
+                    <a href="#local-storage" class="toc-item">
+                        <span class="toc-num">10</span>
+                        <span class="toc-text">Local Storage</span>
+                    </a>
+                    <a href="#inzichten" class="toc-item">
+                        <span class="toc-num">11</span>
+                        <span class="toc-text">Inzichten</span>
+                    </a>
+                    <a href="#reflectie" class="toc-item">
+                        <span class="toc-num">12</span>
+                        <span class="toc-text">Reflectie</span>
+                    </a>
+                </section>
+
+                <section class="sidebar-block reveal">
+                    <p class="sidebar-label">&mdash; Tags</p>
+                    <ul class="tag-list">
+                        <li><span class="tag">Weekly Nerd</span></li>
+                        <li><span class="tag">CSS</span></li>
+                        <li><span class="tag">Clip-path</span></li>
+                        <li><span class="tag">Design Systems</span></li>
+                        <li><span class="tag">Design Tokens</span></li>
+                        <li><span class="tag">Offline First</span></li>
+                        <li><span class="tag">PWA</span></li>
+                        <li><span class="tag">Local Storage</span></li>
+                    </ul>
+                </section>
+
+            </aside>
+        </div>
+    </div>
+
+    <div class="next-blog">
+        <div>
+            <p class="next-label">Volgende blog</p>
+            <p class="next-title">Volgende Weekly Nerd</p>
+        </div>
+        <a href="../blogs.html" class="next-arrow">&rarr;</a>
+    </div>
+
+    <div class="marquee-bar" aria-hidden="true">
+        <div class="marquee-inner">
+            <span>WEEKLY NERD</span><span class="dot">&#10022;</span>
+            <span>CSS</span><span class="dot">&#10022;</span>
+            <span>DESIGN SYSTEMS</span><span class="dot">&#10022;</span>
+            <span>DESIGN TOKENS</span><span class="dot">&#10022;</span>
+            <span>OFFLINE FIRST</span><span class="dot">&#10022;</span>
+            <span>PWA</span><span class="dot">&#10022;</span>
+            <span>LOCAL STORAGE</span><span class="dot">&#10022;</span>
+            <span>WEEKLY NERD</span><span class="dot">&#10022;</span>
+            <span>CSS</span><span class="dot">&#10022;</span>
+            <span>DESIGN SYSTEMS</span><span class="dot">&#10022;</span>
+            <span>DESIGN TOKENS</span><span class="dot">&#10022;</span>
+            <span>OFFLINE FIRST</span><span class="dot">&#10022;</span>
+            <span>PWA</span><span class="dot">&#10022;</span>
+            <span>LOCAL STORAGE</span><span class="dot">&#10022;</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
