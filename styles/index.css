@@ -685,21 +685,6 @@ p {
         padding: 3.5rem 1.5rem 3rem;
     }
 
-    /* Collage blokken iets kleiner op tablet */
-    .hero-collage::before {
-        width: 55%;
-        height: 45%;
-    }
-
-    .hero-collage::after {
-        width: 42%;
-        height: 38%;
-    }
-
-    .hero::before {
-        width: 60%;
-        height: 35%;
-    }
 }
 
 /* ══════════════════════════════════════
@@ -842,25 +827,4 @@ p {
         padding: 3rem 1rem 2.5rem;
     }
 
-    /* Collage blokken op mobiel simpeler */
-    .hero-collage::before {
-        width: 70%;
-        height: 38%;
-        left: 0;
-        clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
-    }
-
-    .hero-collage::after {
-        width: 55%;
-        height: 30%;
-        top: 8%;
-        right: 0;
-    }
-
-    .hero::before {
-        top: 35%;
-        left: 10%;
-        width: 80%;
-        height: 30%;
-    }
 }
