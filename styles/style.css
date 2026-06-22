@@ -19,6 +19,7 @@
   }
 
   body {
+      position: relative;
       background: var(--cream);
       color: var(--black);
       font-family: 'Space Mono', monospace;

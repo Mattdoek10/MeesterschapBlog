@@ -6,52 +6,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meesterschap Blog website</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <script defer src="script.js"></script>
 </head>
 <body>
-    
+
+    <div class="background-images" aria-hidden="true">
+        <img class="bg-img-1" src="images/Adobe Express - file.png" alt="" />
+        <img class="bg-img-2" src="images/Adobe Express - file (1).png" alt="" />
+        <img class="bg-img-3" src="images/Untitled - June 22, 2026 at 11.27.54 (1).png" alt="" />
+        <img class="bg-img-4" src="images/Untitled - June 22, 2026 at 11.27.54 (1) (1).png" alt="" />
+        <img class="bg-img-5" src="images/Untitled - June 22, 2026 at 11.27.54 (1) (2).png" alt="" />
+    </div>
+
+    <!-- HERO + NAV samen in header -->
     <header>
+
         <div class="cursor" id="cursor"></div>
         <div class="cursor-ring" id="cursor-ring"></div>
-        
-        <!-- NAV -->
+
+        <!-- NAV — stijl onaangepast (style.css) -->
         <nav>
-        <a href="#" class="nav-logo">MD</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="goals.html">Goals</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="blogs.html" target="_blank">Arcade</a></li>
-        </ul>
-        <span class="nav-tag">WEB DESIGN & DEV</span>
+            <a href="index.html" class="nav-logo">MD</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#goals">Goals</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="blogs.html" target="_blank">Arcade</a></li>
+            </ul>
+            <span class="nav-tag">WEB DESIGN & DEV</span>
         </nav>
+
+        <!-- HERO -->
+        <div class="hero">
+
+            <!-- Collage blokken + scan lijn -->
+            <!-- <div class="hero-collage"></div>
+            <div class="hero-scan"></div> -->
+            <img class="hero-image" src="images/BlogWebsitePersonal.png" alt="Foto van mezelf in een edit">
+            <!-- Tekst onderaan hero -->
+            <div class="hero-text">
+                <span class="hero-eyebrow">CMD Student — UX/UI Designer — Amsterdam</span>
+                <h1 class="hero-naam" data-text="Matthew Doekhi">Matthew<br>Doekhi</h1>
+                <div class="hero-tag">
+                    <span class="hero-tag-left">Communicatie &amp; Multimedia Design</span>
+                    <span class="hero-badge">010</span>
+                </div>
+            </div>
+
+            <!-- Rode balk onderaan (zoals in de foto) -->
+            <div class="hero-bar">
+                <span class="hero-bar-title">CMD · Blog · Portfolio</span>
+                <span class="hero-bar-meta">2024 — Nu</span>
+            </div>
+
+        </div>
     </header>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker-track">
+            <span class="ticker-item">UX/UI Design</span>
+            <span class="ticker-item">HTML &amp; CSS</span>
+            <span class="ticker-item">Gebruikersonderzoek</span>
+            <span class="ticker-item">Framer</span>
+            <span class="ticker-item">Prototypen</span>
+            <span class="ticker-item">Webdesign</span>
+            <span class="ticker-item">Illustratie</span>
+            <span class="ticker-item">CMD Amsterdam</span>
+            <span class="ticker-item">UX/UI Design</span>
+            <span class="ticker-item">HTML &amp; CSS</span>
+            <span class="ticker-item">Gebruikersonderzoek</span>
+            <span class="ticker-item">Framer</span>
+            <span class="ticker-item">Prototypen</span>
+            <span class="ticker-item">Webdesign</span>
+            <span class="ticker-item">Illustratie</span>
+            <span class="ticker-item">CMD Amsterdam</span>
+        </div>
+    </div>
 
     <main>
 
-        <section>
-            <h1>Matthew</h1>
+        <section id="over-mij">
+            <p class="section-label">001 — Over mij</p>
+            <h2>Welkom</h2>
+            <p>
+                Welkom op mijn persoonlijke blog. Hier deel ik mijn ervaringen
+                als CMD-student, mijn projecten, nieuwe vaardigheden die ik leer
+                en alles wat mij inspireert binnen design en technologie.
+            </p>
         </section>
 
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>Welcome to the Meesterschap Blog.</p>
+        <section id="onderwerpen">
+            <p class="section-label">002 — Onderwerpen</p>
+            <h2>Waar schrijf ik over?</h2>
+            <div class="cards">
+                <article>
+                    <span class="card-num">001</span>
+                    <h3>Design</h3>
+                    <p>UX/UI-design, wireframes, prototypes en het ontwerpen van gebruiksvriendelijke interfaces.</p>
+                </article>
+                <article>
+                    <span class="card-num">002</span>
+                    <h3>Ontwikkeling</h3>
+                    <p>HTML, CSS, JavaScript en het bouwen van interactieve websites.</p>
+                </article>
+                <article>
+                    <span class="card-num">003</span>
+                    <h3>Studie</h3>
+                    <p>Schoolprojecten, stages, uitdagingen en persoonlijke groei.</p>
+                </article>
+            </div>
         </section>
 
+        <section id="blogs">
+            <p class="section-label">003 — Nieuwste blogs</p>
+            <h2>Recente posts</h2>
+            <div class="blog-list">
+                <article>
+                    <a href="blogs/KilianValkhof.html">
+                        <span class="blog-num">01</span>
+                        <div>
+                            <h3>Kilian Valkhof</h3>
+                            <p>Tijdens deze Weekly Nerd vertelde Kilian Valkhof hoe developers websites simpeler, sneller en toegankelijker kunnen maken door vaker CSS te gebruiken in plaats van JavaScript.</p>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="blogs/PPK.html">
+                        <span class="blog-num">02</span>
+                        <div>
+                            <h3>PPK</h3>
+                            <p>In deze Weekly Nerd vertelde PPK over de geschiedenis van het web, de huidige staat van het web en de toekomst van het web.</p>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="blogs/NilsBinder.html">
+                        <span class="blog-num">03</span>
+                        <div>
+                            <h3>Nils Binder</h3>
+                            <p>In deze Weekly Nerd vertelde Nils Binder over design tools, animaties en page transitions in modern webdesign.</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <a class="blog-cta" href="blogs.html">Bekijk alles</a>
+        </section>
 
+        <section id="bezig">
+            <p class="section-label">004 — Nu bezig</p>
+            <h2>Momenteel mee bezig</h2>
+            <ul>
+                <li>UX/UI-stage</li>
+                <li>Portfolio verbeteren</li>
+                <li>Framer leren</li>
+                <li>Nieuwe projecten ontwerpen</li>
+            </ul>
+        </section>
 
+        <section id="reis">
+            <p class="section-label">005 — Tijdlijn</p>
+            <h2>Mijn reis als CMD-student</h2>
+            <ol>
+                <li>
+                    <h3>2024</h3>
+                    <p>Gestart met de opleiding Communicatie en Multimedia Design.</p>
+                </li>
+                <li>
+                    <h3>2025</h3>
+                    <p>Stage gelopen als UX/UI designer en gewerkt aan mijn portfolio.</p>
+                </li>
+                <li>
+                    <h3>Toekomst</h3>
+                    <p>Verder ontwikkelen als UX/UI designer en nieuwe uitdagingen aangaan.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="inspiratie">
+            <p class="section-label">006 — Inspiratie</p>
+            <h2>Wat mij inspireert</h2>
+            <ul>
+                <li>UX/UI-design</li>
+                <li>Webdesign trends</li>
+                <li>Technologie</li>
+                <li>Reizen</li>
+                <li>Illustraties</li>
+            </ul>
+        </section>
+
+        <section id="feitjes">
+            <p class="section-label">007 — Over mij</p>
+            <h2>Leuke feitjes over mij</h2>
+            <ul>
+                <li>☕ Ik ontwerp graag met een kop koffie naast me.</li>
+                <li>🎨 Ik maak graag illustraties.</li>
+                <li>🌍 Ik ontdek graag nieuwe plekken.</li>
+                <li>💡 Ik volg graag nieuwe designtrends.</li>
+            </ul>
+        </section>
 
     </main>
 
-
-    <footer>
-        <p>2026 Meesterschap Blog. All rights reserved.</p>
+    <footer data-bg="BLOG">
+        <h2>Bedankt voor je bezoek</h2>
+        <p>Neem gerust een kijkje bij mijn blogs en volg mijn ontwikkeling als designer.</p>
     </footer>
 
-
 </body>
-
-
+</html>

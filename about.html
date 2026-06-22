@@ -33,12 +33,262 @@
     <main>
 
         <section>
-            <h1>Matthew</h1>
-        </section>
 
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>Welcome to the Meesterschap Blog.</p>
+            <h1>Mijn Reflecties</h1>
+
+            <section>
+                <h2>Sprint 0</h2>
+                <p>Tijdens deze sprint heb ik veel geleerd over front-end development, vooral op het gebied van CSS,
+                    JavaScript en interactieve websites. Mijn leerdoelen waren om beter te worden in animaties,
+                    JavaScript en samenwerken binnen een developmentomgeving.
+                </p>
+                <p>
+                    Ik heb geleerd hoe ik data kan ophalen met een API en deze dynamisch kan tonen op mijn website met
+                    JavaScript. Daarnaast heb ik gewerkt met interactieve SVG's, waarbij gebruikers op districten kunnen
+                    klikken om informatie te bekijken. Dit hielp mij beter begrijpen hoe HTML, CSS en JavaScript
+                    samenwerken.
+                </p>
+                <p>
+                    Ook heb ik nieuwe CSS technieken toegepast, zoals masking, dark & light mode, animaties en een
+                    custom cursor. Hierdoor kreeg mijn website een professionelere uitstraling en leerde ik meer over
+                    gebruikerservaring en vormgeving.
+                </p>
+                <p>
+                    Soms werkte niet alles direct, zoals hover effecten of het gebruiken van een video in een SVG. Door
+                    hiermee te experimenteren heb ik geleerd beter problemen op te lossen en kritischer naar mijn code
+                    te kijken tijdens code reviews.
+                </p>
+                <p>
+                    Ik merk dat ik meer controle krijg over het combineren van design en code. Vooral met CSS-animaties,
+                    API's en interactieve elementen heb ik veel vooruitgang geboekt.
+                </p>
+            </section>
+
+            <section>
+                <h2>Browser Tech</h2>
+                <p></p>
+
+                <p>Wat heel goed ging is dat ik makkelijk de nieuwe code kon snappen over de fieldset en labels en
+                    inputs, alleen in het begin moest ik de hierachie wel goed onder de knie krijgen maar dat ging snel.
+                    Ik vind dat dit goed ging want ik had niet veel tijd nodig om het toe te passen.
+                </p>
+                <p>Wat minder goed ging is het gebruik maken van javascript en die validatie erin doen. het werd alleen
+                    toegepast op de eerste input toen ik het probeerde. Dus ik heb dan een alternatief gebruikt met
+                    display block en display none op een 
+                </p>
+
+                <pre><code><p></p></code></pre>
+
+                <p>Wat ik anders zou doen volgende keer is meer tijd besteden om javascript beter te leren.
+                </p>
+                <p>Waarmee ik meer vast zat was de progressive disclosure laten werken met css. Dit had ik opgelast met
+                    display block en none met de code;
+                </p>
+                <pre><code class="language-css">.divVan1b {
+                &:has(input[name="1bEersteVraag"][value="nee"]:checked) + .divVan1c ._1c-1,
+                &:has(input[name="1bTweedeVraag"][value="nee"]:checked) + .divVan1c ._1c-1,
+                &:has(input[name="1bDerdeVraag"][value="nee"]:checked) + .divVan1c ._1c-1,
+                &:has(input[name="1bDerdeVraag"][value="ja"]:checked) + .divVan1c,
+                &:has(input[name="1bDerdeVraag"][value="ja"]:checked) + .divVan1c ._1c-1 {
+                display: block;
+                }
+                }
+
+                </code></pre>
+
+
+                <h3>Over me leerdoelen</h3>
+
+                <p>Ik wilde aan het begin meer leren werken met javascript, en ik vind dat ik het niet goed genoeg heb
+                    gehaald want ik heb weinig gedaan met javascript. Wat me het meest heeft verras is dat HTML veel
+                    meer dingen heeft dan ik dacht en dat ik het heb kunnen leren en toepassen.
+                </p>
+
+                <h3>Over me code</h3>
+
+                <p>Ik ben het meest trots op het algemene styling binnen me website, daarnaast op die progressive
+                    disclosure die ik heb laten werken met css, want ik zat heel lang daarmee te knoeien.
+                    Wat ik nog niet goed genoeg vind is dat de knoppen niet naast elkaar zijn als het op groter scherm
+                    word getoont, en de javascript code die zeer nau is.
+                </p>
+            </section>
+
+            <section>
+                <h2>CSS To The Rescue</h2>
+                <p></p>
+
+                <h3>Over het proces</h3>
+
+                <p>Wat goed ging is dat ik de controller makkelijk kon stylen. Maar wat ook goed ging is het toepassen
+                    van nieuwe technieken in me code zoals de nesting binnen css en de container queries, om het te
+                    gebruiken voor de themas. Aan het begin was het wel lastig maar nu dat ik het heb gebruik weet ik
+                    het beter toe te passen.
+                    wat ging er niet goed en wat heb je daarvan geleerd? Wat minder goed ging was het gebruiken van de
+                    nieuwe code @property, want ik wou het balletje in me scherm laten bewegen maar het lukte niet. En
+                    nu wel, want ik heb geleerd hoe ik het kan gebruiken met;</p>
+
+                <pre><code class="language-css">
+
+                @property --x {
+                syntax: "<number>";
+                    inherits: true;
+                    initial-value: 0.5;
+                    }
+
+                    @property --y {
+                    syntax: "<number>";
+                        inherits: true;
+                        initial-value: 0.5;
+                        }
+
+                        transition: --x 10000s linear, --y 10000s linear;
+
+                        &:has(input[value="omhoog"]:checked) {
+                        --y: 0;
+                        }
+
+                        &:has(input[value="omlaag"]:checked) {
+                        --y: 1;
+                        }
+
+                        &:has(input[value="rechts"]:checked) {
+                        --x: 1;
+                        }
+
+                        &:has(input[value="links"]:checked) {
+                        --x: 0;
+                        }
+
+                        &:has(input[value="omhoog"]:checked),
+                        &:has(input[value="omlaag"]:checked) {
+                        transition: --x 10000s linear, --y 1.5s linear;
+                        }
+
+                        &:has(input[value="rechts"]:checked),
+                        &:has(input[value="links"]:checked) {
+                        transition: --x 1.5s linear, --y 10000s linear;
+                        }
+
+
+                </code></pre>
+                        <p>Wat ik volgende keer beter zou doen is het zoveel mogelijk gebruik maken van nieuwe code,
+                            zodat ik het beter en sneller kan leren.</p>
+
+
+                        <h3>Over je leerdoelen</h3>
+
+                        <p>Ik wou meer leren over javascript en css animaties. En ik vind dat ik het stukje over css
+                            animaties beter heb geleerd. Niet 100% goed maar wel beter dan toen. Ik weet wat ik moet
+                            gebruiken om iets te laten animeren en hoe.</p>
+
+                        <h3>Over de code</h3>
+
+                        <p>op welk stukje code ben je het meest trots en waarom? Ik ben het meest trots op de code over
+                            het balletje, dus dat ik het kan laten bewegen met knoppen en geen javascript. Ook dat het
+                            balletje kan veranderen met de knoppen aan de rechterkant. Uiteindelijk vind ik de crazy
+                            thema heel leuk en tof hpoe alles zo een beetje veranderd met de container queries. Wat ik
+                            minder goed aan me code vind is de structuur en de comments. Ik kan meer comments gebruiken
+                            zodat iemand die de code leest het makkelijker kan snappen en begrijpen en vinden waar ze
+                            zich bevinden.</p>
+            </section>
+
+            <section>
+                <h2>Project Nebula Explorer</h2>
+                <p></p>
+            </section>
+
+            <section>
+                <h2>API</h2>
+                <p></p>
+
+                <p>Mijn doel van dit project was om een werkende website te maken en nieuwe dingen te leren, vooral
+                    dingen met API. Ik zou zeggen dat dit een succes is. Want ik heb namelijk een goed werkend product
+                    gemaakt. </p>
+
+                <p>De onderdelen die het best werken zijn het ophalen van de data van de API en deze tonen op de
+                    website. Ik vind ook dat het gedeelte van een lang en lat ophalen van de api en tonen op de website
+                    heel goed werkt. Beter dan ik had verwacht zelfs, maar uiteindelijk was het toch simpeler. </p>
+
+                <p>Wat ik het moeilijkst vond was in het begin alls zo'n beetje opneiuw leren en nieuwe dingen leren. Ik
+                    kon niet heel veel met Javascript dus ik was in het begin wel langzamer aan het werk. Maar qua code
+                    vond ik het lastigste gedeelte het stukje code waarbij ik de data ophaal voor de sidebar en deze
+                    laat tonen. Omdat ik het op een moeilijke manier heb gedaan. Ik heb het eerst de data opgehaald en
+                    daarna deze in een array laten zetten en die aray dan returnen zodat ik de data kan gebruiken. Die
+                    data was ook in een ander map, dus moest ik de map importeren in me index.astro om het werkend te
+                    krijgen. Dus ik heb een grote omweg gemaakt om de data binnen te krijgen waar ik dat wou, maar dit
+                    kon ik veel makkelijker doen. Hiervan heb ik namelijk geleerd en heb het goed gedaan bij de ander
+                    pagina namelijk de detailspagina. Dus deze functie/Code zou ik anders doen als ik opnieuw zou
+                    beginnen.</p>
+
+                <p>Ik heb namelijk heel veel nieuwe dingen geleerd qua astro en javascrip, in het kort wat ik heb
+                    geleerd ;
+
+                    - Hoe ik met astro moet werken, dus qua installeren en met componenten te werken.
+                    - Hoe ik if else statements anders kan schrijven, dus met JXZ en ook met ? en :.
+                    - Hoe ik api data kan ophalen en tonen op een website.
+                    - Hoe ik verschillende API's kan gebruiken zoals; leaflet api, ticketmaster api, geolocation api,
+                    alert api en localstorage api.
+                    - Ik heb daarnaast ook geleerd om meer vragen te stellen aan de docenten als je iets niet snap. Want
+                    ik ben iemand die niet graag vragen stelt aan de docdnten en ik probeer het meestal eerst zelf op te
+                    lossen en daarna te vragen.
+                </p>
+
+                <p>Wat beter ging dan ik had verwacht is hoe ik de code zo snel zou snappen. Als ik in het begin weer
+                    zou kijken zonder de kennis naar wat ik nu heb geschrven, zou ik geen idee hebben wat wat is. Maar
+                    nu heb ik een beter beeld en snap ik veel beter de code.</p>
+
+                <p>Wat ik nog verder wil uitbreiden of leren is hoe ik met andere frameworks kan werken. Ik wil leren
+                    werken met three.js bijvoorbeeld , or frameworks die vaak in de praktijk word gebruikt.
+
+                <p>Dit project heeft me veel geholpen om te groeien als een ontwikkelaar, omdat ik nu de basis goed kent
+                    van javascript en hoef ik niet steeds te bouwen op alleen css en html. </p>
+
+            </section>
+
+            <section>
+                <h2>Human Centred Design</h2>
+                <p></p>
+                <p>Tijdens dit project heb ik gewerkt met de Exclusive Design principles; study situation, ignore
+                    conventions, prioritise identity en add nonsense. Deze principles kwamen terug tijdens het
+                    onderzoeken, testen, itereren en bouwen van me accessibility extentie voor iemand die blind is, in
+                    dit geval Ihab. </p>
+
+                <p>Bij study situation heb ik gekeken naar de situatie van Ihab en hoe hij websites gebruikt met een
+                    screenreader en toetsenbord. Tijdens de user tests kwam ik erachter dat veel websites lastig zijn
+                    zonder muis en dat elke website anders werkt qua navigatie en sneltoetsen. Hierdoor ben ik functies
+                    gaan maken zoals sneltoetsen om snel naar delen van de website te gaan, focus management en
+                    opgeslagen posities zodat hij makkelijk terug kan navigeren naar een plek op de website. Ook heb ik
+                    zelf NVDA getest zodat ik beter kon begrijpen hoe een screenreader werkt en hoe de gebruiker de
+                    website ervaart.
+                </p>
+                <p>Het principe ignore conventions zie je terug in de keuzes die ik heb gemaakt binnen de extentie. Veel
+                    websites gebruiken standaard navigatie en headings zijn normaal bijvoorbeeld niet focusbaar. Meestal
+                    start de tab index links boven van de website. Ik heb ervoor gekozen om headings focusbaar te maken
+                    zodat gebruikers makkelijker ergens naartoe kunnen navigeren. Ook heb ik sneltoetsen toegevoegd met
+                    Alt + 1 t/m 4 om snel naar bepaalde onderdelen van de website te springen. Daarnaast heb ik Alt + S
+                    toegevoegd zodat je een positie kan opslaan. Dit zijn geen standaard interacties op websites maar
+                    voor deze gebruiker werkte dit juist beter.
+                </p>
+                <p>Prioritise identity was belangrijk tijdens het hele project omdat ik niet ontwierp voor een standaard
+                    gebruiker maar specifiek voor iemand die blind is. Hierdoor lag de focus meer op toegankelijkheid en
+                    gebruiksgemak dan op alleen een mooie website maken. Tijdens de user tests luisterde ik veel naar de
+                    feedback en wensen van Ihab. Bijvoorbeeld dat hij liever audio feedback wilde in plaats van popup
+                    meldingen en dat sommige sneltoetsen niet handig waren omdat screenreaders al eigen shortcuts
+                    gebruiken. Zijn feedback heeft veel invloed gehad op hoe het eindproduct eruit ziet.
+                </p>
+                <p>Het principe add nonsense zie je terug in kleine grappige toevoegingen binnen de extentie.
+                    Bijvoorbeeld het anime punch geluid wanneer je een opgeslagen positie verwijderd. Dit geluid heeft
+                    niet echt een functie voor de normale gebruiker maar maakt de extentie wat persoonlijker en minder
+                    saai voor Ihab. Tijdens de user test gaf Ihab aan dat hij dit grappig vond en dat zulke kleine
+                    toevoegingen de experience leuker maken.
+                </p>
+                <p>Door deze principles toe te passen ben ik anders gaan kijken naar design. Ik heb geleerd dat je niet
+                    altijd standaard regels hoeft te volgen maar juist moet kijken naar de gebruiker en zijn situatie.
+                    Ook heb ik geleerd hoe belangrijk testen en itereren is binnen Human Centred Design, en over het
+                    algemeen. </p>
+
+            </section>
+
         </section>
 
 
