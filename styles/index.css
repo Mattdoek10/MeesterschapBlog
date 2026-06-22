@@ -320,7 +320,7 @@ p {
     font-family: 'Space Mono', monospace;
     font-size: 0.72rem;
     line-height: 1.9;
-    color: rgba(10,10,10,0.65);
+    color: var(--dark);
 }
 
 /* OVER MIJ */
@@ -450,7 +450,7 @@ p {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(1.4rem, 3.5vw, 2.8rem);
     letter-spacing: 0.04em;
-    color: rgba(240,237,227,0.18);
+    color: var(--Li);
     padding: 1rem 0;
     border-bottom: 1px solid rgba(240,237,227,0.07);
     display: flex;

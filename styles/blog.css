@@ -1,25 +1,78 @@
+/* ==========================================================================
+   1. COLOR VARIABLES (LIGHT MODE & DARK MODE)
+   ========================================================================== */
 :root {
-    --red: #D42B2B;
-    --cream: #F0EDE3;
-    --black: #0A0A0A;
-    --dark: #111111;
-    --mid: #222222;
+    /* Main Theme Colors */
+    --accent: #D42B2B;
+    --accent-muted: rgba(212, 43, 43, 0.3);
+    --bg-main: #F0EDE3;         /* Cream */
+    --bg-inverse: #0A0A0A;      /* Black (voor Hero, Code, Marquee) */
+    
+    /* Text Colors */
+    --text-main: #0A0A0A;
+    --text-muted: rgba(10, 10, 10, 0.7);
+    --text-lead: rgba(10, 10, 10, 0.85);
+    --text-inverse: #F0EDE3;
+    --text-muted-inverse: rgba(240, 237, 227, 0.35);
+    
+    /* UI Elements */
+    --border: rgba(10, 10, 10, 0.1);
+    --border-subtle: rgba(10, 10, 10, 0.06);
+    --grid-color: rgba(10, 10, 10, 0.1);
+    --tag-bg: rgba(10, 10, 10, 0.06);
+    --stroke-color: rgba(95, 88, 88, 0.173);
 }
 
+/* Zowel voor systeeminstellingen als handmatige data-theme="dark" switch */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Main Theme Colors */
+        --accent: #FF5252;      /* Iets lichter rood voor beter contrast */
+        --accent-muted: rgba(255, 82, 82, 0.3);
+        --bg-main: #0A0A0A;     /* Wordt diepzwart */
+        --bg-inverse: #161616;  /* Kaarten/Hero's worden iets lichter donkergrijs */
+        
+        /* Text Colors */
+        --text-main: #F0EDE3;   /* Tekst wordt zacht cream */
+        --text-muted: rgba(240, 237, 227, 0.65);
+        --text-lead: rgba(240, 237, 227, 0.85);
+        --text-inverse: #FFFFFF;
+        --text-muted-inverse: rgba(240, 237, 227, 0.4);
+        
+        /* UI Elements (Omgedraaid naar lichte transparanties) */
+        --border: rgba(240, 237, 227, 0.15);
+        --border-subtle: rgba(240, 237, 227, 0.08);
+        --grid-color: rgba(240, 237, 227, 0.07);
+        --tag-bg: rgba(240, 237, 227, 0.1);
+        --stroke-color: rgba(240, 237, 227, 0.1);
+    }
+}
+
+:root[data-theme="dark"] {
+    /* Kopieer exact dezelfde variabelen hierboven als je handmatig met JS wilt switchen */
+    --accent: #FF5252;
+    --accent-muted: rgba(255, 82, 82, 0.3);
+    --bg-main: #0A0A0A;
+    --bg-inverse: #161616;
+    --text-main: #F0EDE3;
+    --text-muted: rgba(240, 237, 227, 0.65);
+    --text-lead: rgba(240, 237, 227, 0.85);
+    --text-inverse: #FFFFFF;
+    --text-muted-inverse: rgba(240, 237, 227, 0.4);
+    --border: rgba(240, 237, 227, 0.15);
+    --border-subtle: rgba(240, 237, 227, 0.08);
+    --grid-color: rgba(240, 237, 227, 0.07);
+    --tag-bg: rgba(240, 237, 227, 0.1);
+    --stroke-color: rgba(240, 237, 227, 0.1);
+}
+
+/* ==========================================================================
+   2. GLOBAL & LAYOUT STYLES
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-#home {
-    background: var(--red);
-    font-size: 0.5rem;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    color: var(--cream);
-    padding: 0.3rem 2rem;
-    font-family: 'Space Mono', monospace;
 }
 
 html {
@@ -27,10 +80,21 @@ html {
 }
 
 body {
-    background: var(--cream);
-    color: var(--black);
+    background: var(--bg-main);
+    color: var(--text-main);
     font-family: 'Space Mono', monospace;
     cursor: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#home {
+    background: var(--accent);
+    color: var(--text-inverse);
+    font-size: 0.5rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    padding: 0.3rem 2rem;
+    font-family: 'Space Mono', monospace;
 }
 
 /* CURSOR */
@@ -38,7 +102,7 @@ body {
     position: fixed;
     width: 12px;
     height: 12px;
-    background: var(--red);
+    background: var(--accent);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
@@ -49,18 +113,18 @@ body {
     position: fixed;
     width: 36px;
     height: 36px;
-    border: 1.5px solid var(--black);
+    border: 1.5px solid var(--text-main);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9998;
     transform: translate(-50%, -50%);
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease, border-color 0.1s ease;
 }
 
 body:has(a:hover) .cursor-ring,
 body:has(button:hover) .cursor-ring {
     transform: translate(-50%, -50%) scale(1.8);
-    border-color: var(--red);
+    border-color: var(--accent);
 }
 
 /* NAV */
@@ -72,15 +136,16 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background: var(--cream);
-    border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+    background: var(--bg-main);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s ease, border-bottom 0.3s ease;
 }
 
 .nav-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.2em;
-    color: var(--black);
+    color: var(--text-main);
     text-decoration: none;
 }
 
@@ -95,7 +160,7 @@ nav {
     font-size: 0.65rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--text-main);
     text-decoration: none;
     position: relative;
 }
@@ -107,7 +172,7 @@ nav {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--red);
+    background: var(--accent);
     transition: width 0.3s;
 }
 
@@ -118,7 +183,7 @@ nav {
 .nav-tag {
     font-size: 0.55rem;
     letter-spacing: 0.3em;
-    color: var(--red);
+    color: var(--accent);
     font-family: 'Space Mono', monospace;
 }
 
@@ -128,8 +193,8 @@ nav {
     inset: 0;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(10, 10, 10, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(10, 10, 10, 0.1) 1px, transparent 1px);
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: 32px 32px;
 }
 
@@ -138,12 +203,12 @@ nav {
 }
 
 .blog-hero-category {
-    background: var(--black);
+    background: var(--bg-inverse);
     position: relative;
     overflow: hidden;
     padding: 5rem 3rem 4rem;
     margin: 2em;
-
+    transition: background 0.3s ease;
 }
 
 .blog-hero-category::before {
@@ -153,7 +218,7 @@ nav {
     left: 0;
     width: 100%;
     height: 3px;
-    background: var(--red);
+    background: var(--accent);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 1.8s ease;
@@ -163,14 +228,13 @@ nav {
     transform: scaleX(1);
 }
 
-
-
 /* HERO HEADER */
 .blog-hero {
-    background: var(--black);
+    background: var(--bg-inverse);
     position: relative;
     overflow: hidden;
     padding: 5rem 3rem 4rem;
+    transition: background 0.3s ease;
 }
 
 .hero-bg-num {
@@ -179,13 +243,13 @@ nav {
     top: -1rem;
     font-family: 'Anton', sans-serif;
     font-size: 18rem;
-    color: rgba(95, 88, 88, 0.173);
-    -webkit-text-stroke: 2px rgba(95, 88, 88, 0.173);
+    color: var(--stroke-color);
+    -webkit-text-stroke: 2px var(--stroke-color);
     transition: -webkit-text-stroke-color 0.3s ease;
 }
 
 .blog-hero-category:hover .hero-bg-num {
-    -webkit-text-stroke-color: var(--red);
+    -webkit-text-stroke-color: var(--accent);
 }
 
 .back-link {
@@ -193,14 +257,14 @@ nav {
     font-size: 0.6rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: rgba(240, 237, 227, 0.35);
+    color: var(--text-muted-inverse);
     text-decoration: none;
     transition: color 0.2s;
     padding-bottom: 2rem;
 }
 
 .back-link:hover {
-    color: var(--red);
+    color: var(--accent);
 }
 
 .blog-meta {
@@ -212,11 +276,11 @@ nav {
 }
 
 .blog-category {
-    background: var(--red);
+    background: var(--accent);
     font-size: 0.5rem;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    color: var(--cream);
+    color: var(--text-inverse);
     padding: 0.3rem 0.8rem;
     font-family: 'Space Mono', monospace;
 }
@@ -225,7 +289,7 @@ nav {
     font-size: 0.55rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(240, 237, 227, 0.3);
+    color: var(--text-muted-inverse);
     font-family: 'Space Mono', monospace;
 }
 
@@ -235,24 +299,23 @@ nav {
     line-height: 0.9;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: var(--cream);
+    color: var(--text-inverse);
     position: relative;
     z-index: 2;
 }
 
 .blog-hero-title .outline {
-    -webkit-text-stroke: 1.5px var(--cream);
+    -webkit-text-stroke: 1.5px var(--text-inverse);
     color: transparent;
 }
 
 .blog-hero-sub {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
-    color: rgba(240, 237, 227, 0.4);
+    color: var(--text-muted-inverse);
     margin-top: 1.5rem;
     max-width: 500px;
     line-height: 1.8;
-
 }
 
 /* CONTENT AREA */
@@ -267,25 +330,27 @@ nav {
 /* ARTICLE BODY */
 .blog-article {
     padding: 4rem 3rem 6rem;
-    border-right: 1px solid rgba(10, 10, 10, 0.1);
+    border-right: 1px solid var(--border);
+    transition: border-right 0.3s ease;
 }
 
 .blog-article h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
     letter-spacing: 0.08em;
-    color: var(--black);
+    color: var(--text-main);
     margin: 3rem 0 1rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(10, 10, 10, 0.12);
+    border-top: 1px solid var(--border);
     display: flex;
     align-items: center;
     gap: 1rem;
+    transition: border-top 0.3s ease, color 0.3s ease;
 }
 
 .blog-article h2::before {
     content: '//';
-    color: var(--red);
+    color: var(--accent);
     font-size: 1rem;
     font-family: 'Space Mono', monospace;
 }
@@ -293,32 +358,33 @@ nav {
 .blog-article p {
     font-size: 0.75rem;
     line-height: 2;
-    color: rgba(10, 10, 10, 0.7);
+    color: var(--text-muted);
     margin-bottom: 1.2rem;
 }
 
 .blog-article p:first-of-type {
     font-size: 0.85rem;
-    color: rgba(10, 10, 10, 0.85);
+    color: var(--text-lead);
     line-height: 2;
 }
 
 .blog-article a {
-    color: var(--red);
+    color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid rgba(212, 43, 43, 0.3);
+    border-bottom: 1px solid var(--accent-muted);
     transition: border-color 0.2s;
 }
 
 .blog-article a:hover {
-    border-color: var(--red);
+    border-color: var(--accent);
 }
 
 /* CODE BLOCKS */
 .blog-article pre {
     margin: 1.5rem 0;
-    background: var(--black);
+    background: var(--bg-inverse);
     position: relative;
+    transition: background 0.3s ease;
 }
 
 .blog-article pre::before {
@@ -328,7 +394,7 @@ nav {
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--red);
+    background: var(--accent);
 }
 
 .blog-article pre code {
@@ -337,7 +403,7 @@ nav {
     font-family: 'Space Mono', monospace;
     font-size: 0.75rem;
     line-height: 1.8;
-    color: var(--cream);
+    color: var(--text-inverse);
     letter-spacing: 0.05em;
 }
 
@@ -351,17 +417,18 @@ nav {
 .blog-article ul li {
     font-size: 0.72rem;
     line-height: 1.9;
-    color: rgba(10, 10, 10, 0.65);
+    color: var(--text-muted);
     padding: 0.4rem 0 0.4rem 1.5rem;
     position: relative;
-    border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+    border-bottom: 1px solid var(--border-subtle);
+    transition: border-bottom 0.3s ease;
 }
 
 .blog-article ul li::before {
     content: '→';
     position: absolute;
     left: 0;
-    color: var(--red);
+    color: var(--accent);
     font-family: 'Space Mono', monospace;
     font-size: 0.7rem;
 }
@@ -377,7 +444,8 @@ nav {
 .sidebar-block {
     margin-bottom: 2.5rem;
     padding-bottom: 2.5rem;
-    border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+    border-bottom: 1px solid var(--border);
+    transition: border-bottom 0.3s ease;
 }
 
 .sidebar-block:last-child {
@@ -388,7 +456,7 @@ nav {
     font-size: 0.5rem;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    color: var(--red);
+    color: var(--accent);
     margin-bottom: 1rem;
     font-family: 'Space Mono', monospace;
 }
@@ -398,14 +466,14 @@ nav {
     font-size: 1.6rem;
     letter-spacing: 0.05em;
     line-height: 1;
-    color: var(--black);
+    color: var(--text-main);
     margin-bottom: 0.5rem;
 }
 
 .sidebar-desc {
     font-size: 0.6rem;
     line-height: 1.8;
-    color: rgba(10, 10, 10, 0.5);
+    color: var(--text-muted);
 }
 
 .sidebar-link {
@@ -414,16 +482,16 @@ nav {
     font-size: 0.55rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--text-main);
     text-decoration: none;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--text-main);
     padding-bottom: 1px;
     transition: color 0.2s, border-color 0.2s;
 }
 
 .sidebar-link:hover {
-    color: var(--red);
-    border-color: var(--red);
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 .toc-item {
@@ -441,21 +509,21 @@ nav {
 .toc-num {
     font-family: 'Space Mono', monospace;
     font-size: 0.55rem;
-    color: var(--red);
+    color: var(--accent);
     letter-spacing: 0.2em;
 }
 
 .toc-text {
     font-size: 0.6rem;
     letter-spacing: 0.05em;
-    color: rgba(10, 10, 10, 0.6);
+    color: var(--text-muted);
     line-height: 1.5;
     font-family: 'Space Mono', monospace;
     transition: color 0.2s;
 }
 
 .toc-item:hover .toc-text {
-    color: var(--black);
+    color: var(--text-main);
 }
 
 .tag-list {
@@ -463,23 +531,23 @@ nav {
     flex-wrap: wrap;
     gap: 0.4rem;
     list-style: none;
-
 }
 
 .tag {
     font-size: 0.5rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    background: rgba(10, 10, 10, 0.06);
+    background: var(--tag-bg);
     padding: 0.3rem 0.7rem;
-    color: rgba(10, 10, 10, 0.5);
+    color: var(--text-muted);
     font-family: 'Space Mono', monospace;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* MARQUEE BAR */
 .marquee-bar {
-    background: var(--black);
-    color: var(--cream);
+    background: var(--bg-inverse);
+    color: var(--text-inverse);
     padding: 0.4rem 0;
     overflow: hidden;
     font-family: 'Bebas Neue', sans-serif;
@@ -487,6 +555,7 @@ nav {
     letter-spacing: 0.3em;
     white-space: nowrap;
     margin-top: 4rem;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .marquee-inner {
@@ -499,14 +568,13 @@ nav {
 }
 
 .marquee-inner .dot {
-    color: var(--red);
+    color: var(--accent);
 }
 
 @keyframes marquee {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(-50%);
     }
@@ -514,19 +582,20 @@ nav {
 
 /* NEXT BLOG */
 .next-blog {
-    background: var(--black);
+    background: var(--bg-inverse);
     padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 3px solid var(--red);
+    border-top: 3px solid var(--accent);
+    transition: background 0.3s ease, border-top 0.3s ease;
 }
 
 .next-label {
     font-size: 0.5rem;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    color: rgba(240, 237, 227, 0.3);
+    color: var(--text-muted-inverse);
     margin-bottom: 0.5rem;
 }
 
@@ -534,15 +603,15 @@ nav {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
     letter-spacing: 0.05em;
-    color: var(--cream);
+    color: var(--text-inverse);
 }
 
 .next-arrow {
     font-family: 'Anton', sans-serif;
     font-size: 2rem;
-    color: var(--red);
+    color: var(--accent);
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: transform 0.2s, color 0.2s;
 }
 
 .next-arrow:hover {
