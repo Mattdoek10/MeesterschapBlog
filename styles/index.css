@@ -29,29 +29,12 @@ body {
     filter: grayscale(30%) brightness(0.85) contrast(1.1);
 }
 
-/* .background-images {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: -1;
-    overflow: hidden;
-    opacity: 0.18;
-    transform: translateZ(0);
-} */
-
 .background-images img {
     position: absolute;
     object-fit: cover;
     object-position: center;
     opacity: 0.24;
 }
-
-/* .background-images img:hover {
-    transform: scale(1.02);
-} */
 
 .bg-img-1 {
     top: 17%;
@@ -120,93 +103,6 @@ body {
         display: none;
     }
 }
-
-/* COLLAGE FOTO-FRAGMENTEN (CSS shapes, geen echte foto's nodig)
-   Stijl: zwart/donker blokken die overlappen als een gescande collage */
-/* .hero-collage {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-} */
-
-/* Groot donker blok linksboven */
-/* .hero-collage::before {
-    content: '';
-    position: absolute;
-    top: -4%;
-    left: 8%;
-    width: 38%;
-    height: 55%;
-    background: var(--dark);
-    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
-    opacity: 0.92;
-    animation: collage-drift-a 8s ease-in-out infinite alternate;
-} */
-
-/* Middel-rechts blok */
-/* .hero-collage::after {
-    content: '';
-    position: absolute;
-    top: 12%;
-    right: 4%;
-    width: 32%;
-    height: 42%;
-    background: var(--mid);
-    clip-path: polygon(0% 4%, 100% 0%, 96% 96%, 4% 100%);
-    opacity: 0.85;
-    animation: collage-drift-b 10s ease-in-out infinite alternate;
-} */
-
-/* Extra collage vlak via pseudo op .hero zelf */
-/* .hero::before {
-    content: '';
-    position: absolute;
-    top: 30%;
-    left: 28%;
-    width: 46%;
-    height: 40%;
-    background: var(--black);
-    clip-path: polygon(5% 0%, 98% 2%, 100% 100%, 2% 98%);
-    opacity: 0.78;
-    z-index: 1;
-    animation: collage-drift-c 12s ease-in-out infinite alternate;
-} */
-
-/* @keyframes collage-drift-a {
-    from { transform: translate(0, 0) rotate(-1deg); }
-    to   { transform: translate(6px, 10px) rotate(0.5deg); }
-}
-@keyframes collage-drift-b {
-    from { transform: translate(0, 0) rotate(1deg); }
-    to   { transform: translate(-8px, 6px) rotate(-0.8deg); }
-}
-@keyframes collage-drift-c {
-    from { transform: translate(0, 0) rotate(-0.5deg); }
-    to   { transform: translate(5px, -8px) rotate(0.7deg); }
-} */
-
-/* SCAN LIJN */
-/* .hero-scan {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    overflow: hidden;
-}
-.hero-scan::after {
-    content: '';
-    position: absolute;
-    left: 0; right: 0;
-    height: 2px;
-    background: rgba(212, 43, 43, 0.4);
-    top: 0;
-    animation: scan 5s linear infinite;
-}
-@keyframes scan {
-    from { top: -2px; }
-    to   { top: 100%; }
-} */
 
 /* HERO TEKST */
 .hero-text {
@@ -653,36 +549,6 @@ p {
     border-color: var(--red);
     transform: translate(-3px, -3px);
     box-shadow: 3px 3px 0 var(--red);
-}
-
-/* FOOTER */
-footer {
-    background: var(--black);
-    padding: 5rem 2rem 4rem;
-    position: relative;
-    overflow: hidden;
-}
-footer::before {
-    content: attr(data-bg);
-    position: absolute;
-    bottom: -3rem; right: -1rem;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20vw;
-    color: rgba(240,237,227,0.025);
-    line-height: 1;
-    pointer-events: none;
-    letter-spacing: -0.05em;
-}
-footer h2 { color: var(--cream); }
-footer p { color: rgba(240,237,227,0.4); margin-top: 1rem; max-width: 38ch; }
-footer p::after {
-    content: '_';
-    color: var(--red);
-    animation: blink 1s steps(1) infinite;
-}
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0; }
 }
 
 /* UTILITIES */
